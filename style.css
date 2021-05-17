@@ -2,11 +2,88 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   height: 100vh;
-  margin: 0;
-  overflow: hidden;
   font-family: 'Roboto', sans-serif;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-slide {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.left-slide > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+}
+
+.right-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  background: #fff;
+  border: 0;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 18px;
+  padding: 16px;
+}
+
+button:hover {
+  color: #222;
+  background: #ccc;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.slider-container .action-buttons button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 10;
+}
+
+.slider-container .action-buttons .down-btn {
+  transform: translateX(-100%);
+  border-top-left-radius: 4.5px;
+  border-bottom-left-radius: 4.5px;
+}
+
+.slider-container .action-buttons .up-btn {
+  transform: translateY(-100%);
+  border-top-right-radius: 4.5px;
+  border-bottom-right-radius: 4.5px;
 }
